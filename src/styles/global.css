@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  /* ===== PRIMARY PINK SPECTRUM ===== */
+  --color-bg-deep: #1a0508;         /* Deep rose-black (replaces blue #0a0aff) */
+  --color-bg-main: #2d0a14;         /* Main background color */
+  --color-bg-overlay: rgba(26, 5, 8, 0.92); /* Modal backdrop */
+  
+  --color-primary: #ff69b4;         /* Hot pink (main accent - buttons, highlights) */
+  --color-secondary: #ff1493;       /* Deep pink (hover states, active) */
+  --color-accent: #ffb6c1;          /* Light pink (soft elements, borders) */
+  --color-highlight: #fff0f5;       /* Lavender blush (text on dark, card backgrounds) */
+  --color-text-primary: #ffffff;    /* Main text */
+  --color-text-secondary: rgba(255, 240, 245, 0.7); /* Muted text */
+  --color-text-accent: #ff69b4;     /* Accent text (names, keywords) */
+  
+  /* ===== GLASSMORPHISM EFFECTS ===== */
+  --glass-bg: rgba(255, 182, 193, 0.12);
+  --glass-bg-hover: rgba(255, 182, 193, 0.2);
+  --glass-border: rgba(255, 105, 180, 0.25);
+  --glass-border-hover: rgba(255, 105, 180, 0.5);
+  --glass-blur: 20px;
+  --glass-blur-heavy: 30px;
+  
+  /* ===== SHADOWS & GLOWS ===== */
+  --shadow-card: 
+    0 8px 32px rgba(255, 105, 180, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  --shadow-card-hover:
+    0 16px 48px rgba(255, 105, 180, 0.3),
+    0 0 60px rgba(255, 105, 180, 0.15),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.15);
+  --glow-pink: 0 0 20px rgba(255, 105, 180, 0.6), 0 0 40px rgba(255, 105, 180, 0.3);
+  --glow-intense: 0 0 30px rgba(255, 20, 147, 0.8), 0 0 60px rgba(255, 105, 180, 0.4);
+  
+  /* ===== TYPOGRAPHY ===== */
+  --font-display: 'Playfair Display', 'Georgia', serif;  /* Elegant headings */
+  --font-body: 'Poppins', -apple-system, sans-serif;     /* Clean body text */
+  --font-cursive: 'Dancing Script', 'Brush Script MT', cursive; /* Romantic phrases */
+  
+  /* Font Sizes (Mobile Fluid Typography using clamp()) */
+  --text-hero: clamp(28px, 9vw, 56px);      /* Main title */
+  --text-h1: clamp(24px, 7vw, 42px);        /* Card titles */
+  --text-h2: clamp(18px, 5vw, 28px);        /* Section headers */
+  --text-body: clamp(14px, 4vw, 18px);      /* Paragraphs */
+  --text-caption: clamp(12px, 3.5vw, 14px); /* Metadata, dates */
+  --text-small: clamp(10px, 3vw, 12px);     /* Tiny labels */
+  
+  /* ===== SPACING SYSTEM (Mobile Optimized) ===== */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 16px;
+  --space-lg: 24px;
+  --space-xl: 32px;
+  --space-xxl: 48px;
+  
+  /* ===== BORDER RADIUS ===== */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-bg-deep);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  margin: 0;
+  font-weight: 700;
+}
+
+.cursive {
+  font-family: var(--font-cursive);
+  color: var(--color-primary);
+  font-style: italic;
+}
